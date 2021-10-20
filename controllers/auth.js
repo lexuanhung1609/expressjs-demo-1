@@ -63,4 +63,70 @@ const postSignup = (req, res, next) => {
   });
 };
 
-export { postLogin, postSignup };
+const postForgotPassword = (req, res, next) => {
+  const userName = req.body.userName;
+
+  if(!userName) {
+    return res.status(400).json({
+      message: 'Pleae fill the required field',
+    });
+  }
+  
+
+  const match = _.filter(
+    data,
+    (o) => o.userName === userName
+  );
+  
+  if (!match.length) {
+    return res.status(404).json({
+      message: 'Your account is not exist',
+    });
+  }
+
+  res.status(200).json({
+    message: 'Your password is:',
+    body: match[0].password,
+  });
+
+};
+
+const postGetAllUsers = (req, res, next) => {
+
+  const match = _.map(data, 'userName');
+
+  res.status(200).json({
+    body: match,
+  });
+}
+
+const getUserByUserName = (req, res, next) => {
+  
+  const userName = req.params.userName;
+
+  if(!userName) {
+    return res.status(400).json({
+      message: 'Pleae fill the required field',
+    });
+  }
+  
+
+  const match = _.filter(
+    data,
+    (o) => o.userName === userName
+  );
+  
+  if (!match.length) {
+    return res.status(404).json({
+      message: 'Your account is not exist',
+    });
+  }
+
+  res.status(200).json({
+    body: match,
+  });
+
+}
+
+
+export { postLogin, postSignup, postForgotPassword, postGetAllUsers, getUserByUserName };
