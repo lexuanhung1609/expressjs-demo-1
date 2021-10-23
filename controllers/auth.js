@@ -72,7 +72,8 @@ const forgotPassword = (req, res, next) => {
   }
 
   const check = _.filter(data, (o) => o.userName === userName && o.secretNumber == secretNumber);
-  console.log(check);
+  console.log(check[0].password);
+  
   
 
 
@@ -85,7 +86,10 @@ const forgotPassword = (req, res, next) => {
 
   return res.status(200).json({
     message: "Your password is",
-    body: check,
+    body: {
+      userName,
+      password: check[0].password
+    },
   });
 };
 const getAllUser = (req,res,next) =>{
