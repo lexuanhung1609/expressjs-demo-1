@@ -2,7 +2,17 @@ import path from 'path';
 import express from 'express';
 import userRoutes from './routes/auth.js';
 import { config } from 'dotenv';
+
+import mongoose from 'mongoose';
+
 config();
+
+mongoose.connect('mongodb://localhost:27017',(err)=>{
+  if(!err) console.log('connected');
+  else console.log('wrong')
+});
+
+
 
 const app = express();
 const port = process.env.PORT;
