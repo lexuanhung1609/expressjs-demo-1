@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newTransactionHistory FORM</title>
+</head>
+<body>
+    <form action='/newTransactionHistory' method="POST">
+        <p>Enter new transaction history's information:</p><br>
+        <div>
+            <label for="user_id">User ID: </label>
+            <input type="text" name="user_id"><br>
+        </div>
+        <div>
+            <label for="trans_date">Transaction date: </label>
+            <input type="text" name="trans_date"><br>
+        </div>
+        <div>
+            <label for="trans_amount">Transaction amount (dollar): </label>
+            <input type="number" name="trans_amount"><br>
+        </div>
+        <div>
+            <label for="bet_id">Bet ID: </label>
+            <input type="text" name="bet_id"><br>
+        </div>
+        <div>
+            <label for="team_bet_id">Team_bet ID: </label>
+            <input type="text" name="team_bet_id"><br>
+        </div>
+        <div>
+            <label for="activity_status">Activity status: </label>
+            <input type="text" name="activity_status"><br>
+        </div>
+        <div>
+            <label for="winnings">Winnings: </label>
+            <input type="number" name="winnings"><br>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+</body>
+</html>

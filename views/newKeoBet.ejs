@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newKeoBet FORM</title>
+</head>
+<body>
+    <form action='/newKeoBet' method="POST">
+        <p>Enter new keobet's information:</p><br>
+        <div>
+            <label for="home_id">Home (team) ID: </label>
+            <input type="text" name="home_id"><br>
+        </div>
+        <div>
+            <label for="guest_id">Guest (team) ID: </label>
+            <input type="text" name="guest_id"><br>
+        </div>
+        <div>
+            <label for="date_time">Match date and time: </label>
+            <input type="text" name="date_time"><br>
+        </div>
+        <div>
+            <label for="status">Match status: </label>
+            <input type="text" name="status"><br>
+        </div>
+        <div>
+            <label for="bet_rate">Bet rate: </label>
+            <input type="number" name="bet_rate"><br>
+        </div>
+        <div>
+            <label for="winner_id">Winner (team) ID: </label>
+            <input type="text" name="winner_id"><br>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+</body>
+</html>

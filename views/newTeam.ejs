@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newTeam FORM</title>
+</head>
+<body>
+    <form action='/newTeam' method="POST">
+        <p>Enter new team's information:</p><br>
+        <div>
+            <label for="id">Team ID: </label>
+            <input type="text" name="id"><br>
+        </div>
+        <div>
+            <label for="team_name">Team name: </label>
+            <input type="text" name="team_name"><br>
+        </div>
+        <div>
+            <label for="img_url">Paste an URL to team logo: </label>
+            <input type="url" name="img_url"><br>
+        </div>
+        <div>
+            <label for="location">Location: </label>
+            <input type="text" name="location"><br>
+        </div>
+        
+        <button type="submit">Save</button>
+    </form>
+
+</body>
+</html>
